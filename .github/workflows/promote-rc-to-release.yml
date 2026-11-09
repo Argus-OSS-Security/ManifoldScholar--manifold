@@ -3,14 +3,15 @@
 
 name: Promote release candidate to release
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Stable version to release (defaults to MANIFOLD_VERSION)"
-        required: false
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: "Stable version to release (defaults to MANIFOLD_VERSION)"
+#         required: false
+#         type: string
+# 
 permissions:
   contents: write
   issues: write

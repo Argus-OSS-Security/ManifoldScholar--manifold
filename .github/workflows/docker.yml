@@ -1,17 +1,18 @@
 name: "Build & Push Docker"
 
-on:
-  workflow_call:
-    inputs:
-      channel_tag:
-        description: "Channel tag to publish (beta, preview, or latest)"
-        required: true
-        type: string
-      semver:
-        description: "Full semver to tag the image with (e.g. 9.2.3-rc.1)"
-        required: true
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     inputs:
+#       channel_tag:
+#         description: "Channel tag to publish (beta, preview, or latest)"
+#         required: true
+#         type: string
+#       semver:
+#         description: "Full semver to tag the image with (e.g. 9.2.3-rc.1)"
+#         required: true
+#         type: string
+# 
 env:
   GHCR_REGISTRY: ghcr.io
   GHCR_IMAGE_NAME: ${{ github.repository }}

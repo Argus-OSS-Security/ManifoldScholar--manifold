@@ -1,12 +1,13 @@
 name: release-please
 
-on:
-  pull_request_target:
-    types: [closed]
-    branches:
-      - beta
-      - main
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [closed]
+#     branches:
+#       - beta
+#       - main
+# 
 permissions:
   contents: write
   issues: write
